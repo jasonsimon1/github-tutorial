@@ -4,33 +4,43 @@ _by Jason Simon_
 
 ---
 ## Git vs. GitHub
-Git does not require GitHub and takes "screeshots" of your work.  
-GitHub is an online cloud that automatically saves your work. You can access it anywhere, on any computer. Think about any online [Google](https://www.google.com/) services. It requires Git.
+Git does not require GitHub and takes "screeshots" of your work. It keeps track of your changes.   
+GitHub is an online cloud that automatically saves your work. You can access it anywhere, on any computer. Think about any online [Google](https://www.google.com/) services. It does requires Git.
 
 
 
 ---
 ## Initial Setup
-In order to get the boat moving, you'd need a [Github](https://github.com/) account. You would only need to create **one** Github account. In the case that you're using [c9.io](https://aws.amazon.com/cloud9/?origin=c9io), you're going to need to set up a bridge between both programs. You do this by getting the SSH key from **c9** (settings > SSH Keys > Second Box). Finally, go to **GitHub** (Settings > SSH KEYS AND GPG KEYS > New SSH Key)
+In order to get the boat moving, you're going to  need a [Github](https://github.com/) account. You only need to create **one** Github account.The setup process is similiar to that of any other (if you know how to make an Instagram account, this should be a piece of cake). In the case that you're using [c9.io](https://aws.amazon.com/cloud9/?origin=c9io), you will need to set up a bridge between both programs. You do this by getting the SSH key from **c9** (settings > SSH Keys > Second Box). Finally, go to **GitHub** (Settings > SSH KEYS AND GPG KEYS > New SSH Key). You've done it! You can now push/pull/fork or clone from Cloud9 to GitHub.
 
 
 ---
 ## Repository Setup
-`git init` initializes (starts) a new workspace. This command is to be used only once, at the start of your code. When you're ready to add and commit, you'd need to head on over to _Github_ and create a new repo. `git remote add origin URL` will set up a "bridge" between your local and remote repository.
+`git init` initializes (starts) a new workspace. This command is to be used only once, at the start of your code. When you're ready to add and commit, you'd need to head on over to [Github](https://github.com/) and create a new repo. `git remote add origin URL` will set up a "bridge" between your local and remote repository.
 
 
 ---
 ## Workflow & Commands
-* `git status` will become one of the most important parts of your code. It allows you to check for any errors you may encounter along the way and even tells you what commands you'd need to use in order to fix it.  
+* `git status` will become one of the most important parts of your code. It allows you to check for any errors you may encounter along the way and even tells you what commands you'd need to use in order to fix it. If your changes aren't staged for commit, you will see red. If they have been staged, you will see green.
 * `git add .`will add the current directory you worked on to the staging area.  
 * `git commit -m` will commit to the staging area. 
-* `git push` will send your commits to GitHub. From there, you'll be able to see your changes.
+* `git push` will send your commits to [GitHub](https://github.com/). From there, you'll be able to see your changes.  
+
+Heres an example:  
+```
+git add .  
+git status
+git commit -m"change the text"
+git push
+```
+
 
 
 ---
 ## Rolling Back Changess
-Assume you want to change the name of your Repo. You would need to delete your work from your local repository. `rm -rf file_name` will delete your project.  
-Next, go to **GitHub** and rename your repo.  
-Clone the Github repo to your local directory by clicking the green _clone or download_ option. Make sure its set on clone with SSH and copy it.  
+Assume you want to change the name of your Repo. You would need to **delete** your work from your local repository. This is the easiest way to renaming a project without having to use a billion confusing commands.  
+`rm -rf file_name` will delete your project.  
+Next, go to [GitHub](https://github.com/) and rename your repo.  
+Clone the [Github](https://github.com/) repo to your local directory by clicking the green _clone or download_ option. Make sure its set on clone (with SSH) and copy it.  
 Finally, go to your workspace by using the command `cd ../`   
-`git clone git@github.com:yourusername/file-name.git` will bring back the repo to you Cloud9. **Make sure you CD into it everytime.** You can edit what you please and then add, commit, and push 
+`git clone git@github.com:yourusername/file-name.git` will bring back the repo to you Cloud9. **Make sure you CD into it everytime.** You can edit what you please and then add, commit, and push all over again.
