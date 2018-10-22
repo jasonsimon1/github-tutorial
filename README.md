@@ -11,7 +11,7 @@ GitHub is an online cloud that automatically saves your work. You can access it 
 
 ---
 ## Initial Setup
-In order to get the boat moving, you're going to  need a [Github](https://github.com/) account. You only need to create **one** Github account.The setup process is similiar to that of any other (if you know how to make an Instagram account, this should be a piece of cake). In the case that you're using [c9.io](https://aws.amazon.com/cloud9/?origin=c9io), you will need to set up a bridge between both programs. You do this by getting the SSH key from **c9** (settings > SSH Keys > Second Box). Finally, go to **GitHub** (Settings > SSH KEYS AND GPG KEYS > New SSH Key). You've done it! You can now push/pull/fork or clone from Cloud9 to GitHub.
+In order to get the boat moving, you're going to  need a [Github](https://github.com/) account. You only need to create **one** Github account.The setup process is similiar to that of any other (if you know how to make an Instagram account, this should be a piece of cake). In the case that you're using [c9.io](https://aws.amazon.com/cloud9/?origin=c9io), you will need to set up a bridge between both programs. You do this by getting the SSH key from **c9** (settings > SSH Keys > Second Box > Copy). Finally, go to **GitHub** (Settings > SSH KEYS AND GPG KEYS > New SSH Key > Paste). You've done it! You can now push/pull/fork or clone from Cloud9 to GitHub or Github to Cloud9.
 
 
 ---
@@ -29,8 +29,17 @@ In order to get the boat moving, you're going to  need a [Github](https://github
 Heres an example:  
 ```
 git add .  
-git status
-git commit -m"change the text"
+git status  
+On branch master  
+Your branch is up-to-date with 'origin/master'.  
+
+  
+  Changes to be committed:  
+    (use "git reset HEAD <file>..." to unstage)  
+                modified:     README.md
+git commit -m"change the text"  
+[master 0089f4d] change the details  
+1 file changed, 20 insertions(+), 10 deletions(-)
 git push
 ```
 
@@ -43,4 +52,9 @@ Assume you want to change the name of your Repo. You would need to **delete** yo
 Next, go to [GitHub](https://github.com/) and rename your repo.  
 Clone the [Github](https://github.com/) repo to your local directory by clicking the green _clone or download_ option. Make sure its set on clone (with SSH) and copy it.  
 Finally, go to your workspace by using the command `cd ../`   
-`git clone git@github.com:yourusername/file-name.git` will bring back the repo to you Cloud9. **Make sure you CD into it everytime.** You can edit what you please and then add, commit, and push all over again.
+`git clone git@github.com:yourusername/file-name.git` will bring back the repo to you Cloud9. **Make sure you CD into it everytime.** You can edit what you please and then add, commit, and push all over again.  
+
+
+
+#### So you want to clone someone elses work?  
+Go to the Github repo you wish to have and **fork** it. This will give you a copy of _their_ repo to _your_ Github account. It doesn't go straight to your local repository because when you go to push the changes you made, they won't show up at all. So, after you forked it (there is a button on the top right) clone that version down to your local repository.
