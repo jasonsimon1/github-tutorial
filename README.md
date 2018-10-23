@@ -28,6 +28,7 @@ In order to get the boat moving, you're going to  need a [Github](https://github
 
 Heres an example:  
 ```
+cd file_name
 git add .  
 git status  
 On branch master  
