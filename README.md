@@ -10,17 +10,17 @@ GitHub is an online cloud that automatically saves your work. You can access it 
 
 
 ---
-## Initial Setup
+## Initial Setup <!-- When copying the SSH Key make sure to mention to copy the 2nd key, because the first key is for connecting github servers which is very different from the second key -->
 In order to get the boat moving, you're going to  need a [Github](https://github.com/) account. You only need to create **one** Github account.The setup process is similiar to that of any other (if you know how to make an Instagram account, this should be a piece of cake). In the case that you're using [c9.io](https://aws.amazon.com/cloud9/?origin=c9io), you will need to set up a bridge between both programs. You do this by getting the SSH key from **c9** (settings > SSH Keys > Second Box > Copy). Finally, go to **GitHub** (Settings > SSH KEYS AND GPG KEYS > New SSH Key > Paste). You've done it! You can now push/pull/fork or clone from Cloud9 to GitHub or Github to Cloud9.
 
 
 ---
-## Repository Setup
+## Repository Setup <!-- give a little bit more instruction on how to create a remote. Because that can be confusing for newbies -->
 `git init` initializes (starts) a new workspace. This command is to be used only once, at the start of your code. When you're ready to add and commit, you'd need to head on over to [Github](https://github.com/) and create a new repo. `git remote add origin URL` will set up a "bridge" between your local and remote repository.
 
 
 ---
-## Workflow & Commands
+## Workflow & Commands 
 * `git status` will become one of the most important parts of your code. It allows you to check for any errors you may encounter along the way and even tells you what commands you'd need to use in order to fix it. If your changes aren't staged for commit, you will see red. If they have been staged, you will see green.
 * `git add .`will add the current directory you worked on to the staging area.  
 * `git commit -m` will commit to the staging area. 
@@ -47,7 +47,7 @@ git push
 
 
 ---
-## Rolling Back Changess
+## Rolling Back Changess <!-- Make sure to add how to undo edit & add & commit & push. Mr.Mueller will be checking on these as well -->
 Assume you want to change the name of your Repo. You would need to **delete** your work from your local repository. This is the easiest way to renaming a project without having to use a billion confusing commands.  
 `rm -rf file_name` will delete your project.  
 Next, go to [GitHub](https://github.com/) and rename your repo.  
